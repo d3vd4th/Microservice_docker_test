@@ -1,0 +1,53 @@
+# -------------------------------
+# 1. Python
+# -------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+*.egg
+*.pyo
+*.log
+
+# Virtual environments (common names)
+venv/
+.venv/
+env/
+ENV/
+
+# If using pytest, coverage, or other tools:
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+
+# -------------------------------
+# 2. Docker
+# -------------------------------
+# Local Docker overrides (if any)
+docker-compose.override.yml
+docker-compose.yml.local
+.dockerignore
+
+# Docker build artifacts
+**/build/
+**/tmp/
+**/dist/
+**/release/
+
+# -------------------------------
+# 3. Secrets / Config
+# -------------------------------
+.env
+**/.env
+**/.secret
+
+# -------------------------------
+# 4. OS / Editor / Misc
+# -------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
