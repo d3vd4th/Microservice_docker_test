@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  gateway-service:
+    build: ./gateway-service
+    container_name: gateway_service
+    ports:
+      - "5000:5000"  # Gateway is exposed on host port 5000
+    environment:
+      FLASK_ENV: "development"
+    depends_on:
+      - auth-service
+      - todo-service
+      - blog-service
+
+  auth-service:
+    build: ./auth-service
+    container_name: auth_service
+    ports:
+      - "5001:5000"  # Exposed for debugging (optional)
+    environment:
+      FLASK_ENV: "development"
+
+  todo-service:
+    build: ./todo-service
+    container_name: todo_service
+    ports:
+      - "5002:5000"  # Exposed for debugging (optional)
+    environment:
+      FLASK_ENV: "development"
+
+  blog-service:
+    build: ./blog-service
+    container_name: blog_service
+    ports:
+      - "5003:5000"  # Exposed for debugging (optional)
+    environment:
+      FLASK_ENV: "development"

@@ -1,0 +1,42 @@
+# -------------------------------
+# 1. Node / React Native
+# -------------------------------
+node_modules
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Expo directories
+.expo/
+.expo-shared/
+
+# Production build outputs (if any)
+dist/
+build/
+web-build/
+ios/
+android/
+
+# -------------------------------
+# 2. Environment / Secrets
+# -------------------------------
+.env
+**/.env
+
+# -------------------------------
+# 3. OS / Editor Files
+# -------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# For TypeScript
+*.tsbuildinfo
+
+# -------------------------------
+# 4. Other Potential Files
+# -------------------------------
+*.log
+coverage/
